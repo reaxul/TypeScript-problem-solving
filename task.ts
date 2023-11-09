@@ -37,3 +37,15 @@ function isCat(obj: any): string | undefined {
         return "no, it's not a cat.";
     }
 }
+
+
+//problem-4
+function sumNumbers(mixedData: (string | number)[]): number {
+    let total = 0;
+    for (const item of mixedData) {
+        if (typeof item === 'number') {
+            total += item as number;
+        }
+    }
+    return total;
+}
