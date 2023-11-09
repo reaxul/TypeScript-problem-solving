@@ -8,3 +8,15 @@ function stringOrNumber(param: string | number): number {
 }
 
 
+//problem-2
+interface Person {
+    address?: {
+        city: string;
+        street: string;
+    };
+    phone?: string;
+}
+
+function getAddressCity(person: Person): string | undefined {
+    return person?.address?.city;
+}
