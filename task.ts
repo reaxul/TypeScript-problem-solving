@@ -49,3 +49,23 @@ function sumNumbers(mixedData: (string | number)[]): number {
     }
     return total;
 }
+
+
+//problem-5
+interface Car {
+    make: string;
+    model: string;
+    year: number;
+}
+
+interface Driver {
+    name: string;
+    licenseNumber: string;
+}
+
+function combineCarAndDriver(car: Car, driver: Driver) {
+    return {
+        ...car,
+        ...driver,
+    };
+}
