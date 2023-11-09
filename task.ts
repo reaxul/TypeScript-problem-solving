@@ -94,10 +94,12 @@ function findFirstOccurrence<T>(arr: T[], val: T): number {
 }
 
 const numArr = [1, 2, 3, 4, 5,'3'];
-const strArr = ['apple', 'banana', 'cherry', 'date'];
+const strArr = ['apple', 'mango', 'strawberry', 'pineapple'];
 const boolArr = [true, false, true, true, false];
 
 console.log(findFirstOccurrence(numArr, 3)); // Output: 2
-console.log(findFirstOccurrence(strArr, 'banana')); // Output: 1
+console.log(findFirstOccurrence(strArr, 'mango')); // Output: 1
 console.log(findFirstOccurrence(boolArr, false)); // Output: 1
-console.log(findFirstOccurrence(numArr, 6)); // Output: -1
+console.log(findFirstOccurrence(numArr, 69)); // Output: -1
+
+
