@@ -69,3 +69,35 @@ function combineCarAndDriver(car: Car, driver: Driver) {
         ...driver,
     };
 }
+
+
+//problem-6
+function sumArrayNumbers(param: unknown): void {
+    if (Array.isArray(param)) {
+        const isArrayOfNumbers = param.every((item) => typeof item === 'number');
+        if (isArrayOfNumbers) {
+            const sum = param.reduce((acc, curr) => acc + curr, 0);
+            console.log(`The sum of the numbers in the array is ${sum}.`);
+        } else {
+            console.error('Error: The parameter is not an array of numbers.');
+        }
+    } else {
+        console.error('Error: The parameter is not an array.');
+    }
+}
+
+
+//problem-7
+function findFirstOccurrence<T>(arr: T[], val: T): number {
+    const index = arr.indexOf(val);
+    return index;
+}
+
+const numArr = [1, 2, 3, 4, 5,'3'];
+const strArr = ['apple', 'banana', 'cherry', 'date'];
+const boolArr = [true, false, true, true, false];
+
+console.log(findFirstOccurrence(numArr, 3)); // Output: 2
+console.log(findFirstOccurrence(strArr, 'banana')); // Output: 1
+console.log(findFirstOccurrence(boolArr, false)); // Output: 1
+console.log(findFirstOccurrence(numArr, 6)); // Output: -1
