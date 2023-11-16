@@ -103,3 +103,26 @@ console.log(findFirstOccurrence(boolArr, false)); // Output: 1
 console.log(findFirstOccurrence(numArr, 69)); // Output: -1
 
 
+//problem-8
+interface Product {
+    name: string;
+    price: number;
+    quantity: number;
+}
+
+function calculateTotalCost(products: Product[]): number {
+    let totalCost = 0;
+    for (const product of products) {
+        totalCost += product.price * product.quantity;
+    }
+    return totalCost;
+}
+
+const shoppingCart: Product[] = [
+    { name: "Shirt", price: 200, quantity: 2 },
+    { name: "Pants", price: 300, quantity: 1 },
+    { name: "Shoes", price: 950, quantity: 1 },
+];
+
+const totalCost = calculateTotalCost(shoppingCart);
+console.log(`The total cost of the items in the shopping cart is ${totalCost}.`);
